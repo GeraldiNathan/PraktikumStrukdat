@@ -12,44 +12,37 @@ public class LinkedList {
             }
         }
 
-        // Represent the head and tail of the singly linked list
         public Node head = null;
         public Node tail = null;
 
-        // addNode() will add a new node to the list
+        // method add berfungsi menambahkan node baru
         public void add(int data)
         {
-
-            // Create a new node
+            // tambah node baru
             Node newNode = new Node(data);
 
-            // Checks if the list is empty
+            // cek list apakah kosong
             if (head == null) {
 
-                // If list is empty, both head and tail will
-                // point to new node
+                // kalo kosong , head dan tail akan menuju ke node baru
                 head = newNode;
                 tail = newNode;
             }
             else {
 
-                // newNode will be added after tail such that
-                // tail's next will point to newNode
+                //menambahkan node baru pada tail
                 tail.next = newNode;
 
-                // newNode will become new tail of the list
+                //node yang baru akan ditambahkan didalam tail terakhir
                 tail = newNode;
             }
         }
 
-        // sortList() will sort nodes of the list in ascending
-        // order
         public void sortList()
         {
 
             // Node current will point to head
             Node current = head, index = null;
-
             int temp;
 
             if (head == null) {
@@ -62,35 +55,26 @@ public class LinkedList {
                     index = current.next;
 
                     while (index != null) {
-                        // If current node's data is greater
-                        // than index's node data, swap the data
-                        // between them
                         if (current.data > index.data) {
                             temp = current.data;
                             current.data = index.data;
                             index.data = temp;
                         }
-
                         index = index.next;
                     }
                     current = current.next;
                 }
             }
         }
-
-        // display() will display all the nodes present in the
-        // list
         public void Output()
         {
-            // Node current will point to head
             Node current = head;
 
             while (current != null) {
-                // Prints each node by incrementing pointer
+                // Print each node by incrementing pointer
                 System.out.print(current.data + " ");
                 current = current.next;
             }
-
             System.out.println();
         }
 
