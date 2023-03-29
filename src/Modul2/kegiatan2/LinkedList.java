@@ -1,8 +1,6 @@
 package Modul2.kegiatan2;
 
 public class LinkedList {
-
-        // Represent a node of the singly linked list
         class Node {
             int data;
             Node next;
@@ -19,7 +17,7 @@ public class LinkedList {
         public Node tail = null;
 
         // addNode() will add a new node to the list
-        public void addNode(int data)
+        public void add(int data)
         {
 
             // Create a new node
@@ -82,15 +80,11 @@ public class LinkedList {
 
         // display() will display all the nodes present in the
         // list
-        public void display()
+        public void Output()
         {
             // Node current will point to head
             Node current = head;
 
-            if (head == null) {
-                System.out.println("List is empty");
-                return;
-            }
             while (current != null) {
                 // Prints each node by incrementing pointer
                 System.out.print(current.data + " ");
@@ -102,22 +96,22 @@ public class LinkedList {
 
         public static void main(String[] args)
         {
-            LinkedList ListNode = new LinkedList();
+            LinkedList list = new LinkedList();
 
-            ListNode.addNode(8);
-            ListNode.addNode(7);
-            ListNode.addNode(1);
-            ListNode.addNode(4);
-            ListNode.addNode(6);
-            ListNode.addNode(2);
-            ListNode.addNode(3);
+            list.add(8);
+            list.add(7);
+            list.add(1);
+            list.add(4);
+            list.add(6);
+            list.add(2);
+            list.add(3);
 
             System.out.println("Original list: ");
-            ListNode.display();
+            list.Output();
 
-            ListNode.sortList();
+            list.sortList();
 
             System.out.println("Sorted list: ");
-            ListNode.display();
+            list.Output();
         }
     }
