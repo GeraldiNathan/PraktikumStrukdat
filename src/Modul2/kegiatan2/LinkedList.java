@@ -40,7 +40,6 @@ public class LinkedList {
 
         public void sortList()
         {
-
             // Node current will point to head
             Node current = head, index = null;
             int temp;
@@ -77,11 +76,9 @@ public class LinkedList {
             }
             System.out.println();
         }
-
         public static void main(String[] args)
         {
             LinkedList list = new LinkedList();
-
             list.add(8);
             list.add(7);
             list.add(1);
