@@ -49,8 +49,6 @@ public class LinkedList {
             }
             else {
                 while (current != null) {
-                    // Node index will point to node next to
-                    // current
                     index = current.next;
 
                     while (index != null) {
@@ -91,7 +89,6 @@ public class LinkedList {
             list.Output();
 
             list.sortList();
-
             System.out.println("Sorted list: ");
             list.Output();
         }
