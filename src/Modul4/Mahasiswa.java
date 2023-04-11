@@ -29,6 +29,8 @@ public class Mahasiswa {
         if (data != null){
             System.out.println("Data Mahasiswa :" + data.nama + ", Kelas : " + data.kelas
             + ", Matkul Praktikum : " + data.matkulPraktikum + ", Nim : " + data.nim);
+        }else{
+            System.out.println("Data tidak ada");
         }
     }
 }
