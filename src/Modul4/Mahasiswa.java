@@ -2,7 +2,7 @@ package Modul4;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class Mahasiswa {
+public  class Mahasiswa {
     String nama, kelas, matkulPraktikum;
     int nim;
 
@@ -14,9 +14,9 @@ public class Mahasiswa {
     }
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        Scanner scn = new Scanner(System.in);
         HashMap<String, Mahasiswa> mhs = new HashMap<>();
-        String Scan;
+        String input;
         Mahasiswa data;
 
         mhs.put("1", new Mahasiswa("Manda", "3H", "StrukturData", 20211037));
@@ -24,7 +24,7 @@ public class Mahasiswa {
         mhs.put("3", new Mahasiswa("Mandu", "3C", "StrukturData", 20211035));
 
         System.out.println("Masukan ID: ");
-        Scan = input.nextLine();
+        input = scn.nextLine();
         data = mhs.get(input);
         if (data != null){
             System.out.println("Data Mahasiswa :" + data.nama + ", Kelas : " + data.kelas
