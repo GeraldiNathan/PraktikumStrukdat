@@ -1,4 +1,4 @@
-package Modul4;
+package Modul4.LatPrak;
 import java.util.HashMap;
 import java.util.Scanner;
 
